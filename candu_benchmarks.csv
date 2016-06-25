@@ -1,0 +1,106 @@
+Sample,Isotope,Evaluation,Calculated,Units
+Pickering-A 19558C,u235,ENDF VII.0,0.001680219,at % / element
+Pickering-A 19558C,u236,ENDF VII.0,0.000834829,at % / element
+Pickering-A 19558C,u238,ENDF VII.0,0.997484952,at % / element
+Pickering-A 19558C,pu238,ENDF VII.0,0.001332153,at % / element
+Pickering-A 19558C,pu239,ENDF VII.0,0.647712112,at % / element
+Pickering-A 19558C,pu240,ENDF VII.0,0.295714082,at % / element
+Pickering-A 19558C,pu241,ENDF VII.0,0.032172183,at % / element
+Pickering-A 19558C,pu242,ENDF VII.0,0.02306947,at % / element
+Pickering-A 19558C,h3,ENDF VII.0,2.2033E+09,Bq / kgU
+Pickering-A 19558C,sr90,ENDF VII.0,4.9945E+11,Bq / kgU
+Pickering-A 19558C,tc99,ENDF VII.0,1.5208E+08,Bq / kgU
+Pickering-A 19558C,ru106,ENDF VII.0,2.8193E+08,Bq / kgU
+Pickering-A 19558C,sb125,ENDF VII.0,2.6898E+09,Bq / kgU
+Pickering-A 19558C,i129,ENDF VII.0,2.9995E+05,Bq / kgU
+Pickering-A 19558C,cs134,ENDF VII.0,4.0163E+09,Bq / kgU
+Pickering-A 19558C,cs137,ENDF VII.0,7.7928E+11,Bq / kgU
+Pickering-A 19558C,eu154,ENDF VII.0,9.4605E+09,Bq / kgU
+Pickering-A 19558C,eu155,ENDF VII.0,3.6960E+09,Bq / kgU
+Pickering-A 19558C,np237,ENDF VII.0,1.0087E+06,Bq / kgU
+Pickering-A 19558C,am241,ENDF VII.0,1.9285E+10,Bq / kgU
+Pickering-A 19558C,cm244,ENDF VII.0,7.8803E+08,Bq / kgU
+Pickering-A 19558C,u235,ENDF VII.1,0.17%,at % / element
+Pickering-A 19558C,u236,ENDF VII.1,0.08%,at % / element
+Pickering-A 19558C,u238,ENDF VII.1,99.75%,at % / element
+Pickering-A 19558C,pu238,ENDF VII.1,0.15%,at % / element
+Pickering-A 19558C,pu239,ENDF VII.1,64.53%,at % / element
+Pickering-A 19558C,pu240,ENDF VII.1,29.70%,at % / element
+Pickering-A 19558C,pu241,ENDF VII.1,3.25%,at % / element
+Pickering-A 19558C,pu242,ENDF VII.1,2.37%,at % / element
+Pickering-A 19558C,h3,ENDF VII.1,2.21E+09,Bq / kgU
+Pickering-A 19558C,sr90,ENDF VII.1,5.01E+11,Bq / kgU
+Pickering-A 19558C,tc99,ENDF VII.1,1.53E+08,Bq / kgU
+Pickering-A 19558C,ru106,ENDF VII.1,2.83E+08,Bq / kgU
+Pickering-A 19558C,sb125,ENDF VII.1,2.70E+09,Bq / kgU
+Pickering-A 19558C,i129,ENDF VII.1,3.01E+05,Bq / kgU
+Pickering-A 19558C,cs134,ENDF VII.1,3.97E+09,Bq / kgU
+Pickering-A 19558C,cs137,ENDF VII.1,7.82E+11,Bq / kgU
+Pickering-A 19558C,eu154,ENDF VII.1,1.03E+10,Bq / kgU
+Pickering-A 19558C,eu155,ENDF VII.1,3.92E+09,Bq / kgU
+Pickering-A 19558C,np237,ENDF VII.1,9.62E+05,Bq / kgU
+Pickering-A 19558C,am241,ENDF VII.1,1.94E+10,Bq / kgU
+Pickering-A 19558C,cm244,ENDF VII.1,8.30E+08,Bq / kgU
+Pickering-A 19558C,u235,ENDF VII.0 + mod-Wright,0.17%,at % / element
+Pickering-A 19558C,u236,ENDF VII.0 + mod-Wright,0.08%,at % / element
+Pickering-A 19558C,u238,ENDF VII.0 + mod-Wright,99.75%,at % / element
+Pickering-A 19558C,pu238,ENDF VII.0 + mod-Wright,0.13%,at % / element
+Pickering-A 19558C,pu239,ENDF VII.0 + mod-Wright,65.14%,at % / element
+Pickering-A 19558C,pu240,ENDF VII.0 + mod-Wright,29.28%,at % / element
+Pickering-A 19558C,pu241,ENDF VII.0 + mod-Wright,3.18%,at % / element
+Pickering-A 19558C,pu242,ENDF VII.0 + mod-Wright,2.28%,at % / element
+Pickering-A 19558C,h3,ENDF VII.0 + mod-Wright,2.18E+09,Bq / kgU
+Pickering-A 19558C,sr90,ENDF VII.0 + mod-Wright,5.01E+11,Bq / kgU
+Pickering-A 19558C,tc99,ENDF VII.0 + mod-Wright,1.53E+08,Bq / kgU
+Pickering-A 19558C,ru106,ENDF VII.0 + mod-Wright,2.84E+08,Bq / kgU
+Pickering-A 19558C,sb125,ENDF VII.0 + mod-Wright,2.71E+09,Bq / kgU
+Pickering-A 19558C,i129,ENDF VII.0 + mod-Wright,3.02E+05,Bq / kgU
+Pickering-A 19558C,cs134,ENDF VII.0 + mod-Wright,4.03E+09,Bq / kgU
+Pickering-A 19558C,cs137,ENDF VII.0 + mod-Wright,7.83E+11,Bq / kgU
+Pickering-A 19558C,eu154,ENDF VII.0 + mod-Wright,8.12E+09,Bq / kgU
+Pickering-A 19558C,eu155,ENDF VII.0 + mod-Wright,3.89E+09,Bq / kgU
+Pickering-A 19558C,np237,ENDF VII.0 + mod-Wright,9.78E+05,Bq / kgU
+Pickering-A 19558C,am241,ENDF VII.0 + mod-Wright,1.94E+10,Bq / kgU
+Pickering-A 19558C,cm244,ENDF VII.0 + mod-Wright,7.94E+08,Bq / kgU
+Pickering-A 19558C,u235,ENDF VII.0 + mod-Mughabghab v1,0.17%,at % / element
+Pickering-A 19558C,u236,ENDF VII.0 + mod-Mughabghab v1,0.08%,at % / element
+Pickering-A 19558C,u238,ENDF VII.0 + mod-Mughabghab v1,99.75%,at % / element
+Pickering-A 19558C,pu238,ENDF VII.0 + mod-Mughabghab v1,0.13%,at % / element
+Pickering-A 19558C,pu239,ENDF VII.0 + mod-Mughabghab v1,64.67%,at % / element
+Pickering-A 19558C,pu240,ENDF VII.0 + mod-Mughabghab v1,29.64%,at % / element
+Pickering-A 19558C,pu241,ENDF VII.0 + mod-Mughabghab v1,3.23%,at % / element
+Pickering-A 19558C,pu242,ENDF VII.0 + mod-Mughabghab v1,2.33%,at % / element
+Pickering-A 19558C,h3,ENDF VII.0 + mod-Mughabghab v1,2.21E+09,Bq / kgU
+Pickering-A 19558C,sr90,ENDF VII.0 + mod-Mughabghab v1,5.01E+11,Bq / kgU
+Pickering-A 19558C,tc99,ENDF VII.0 + mod-Mughabghab v1,1.53E+08,Bq / kgU
+Pickering-A 19558C,ru106,ENDF VII.0 + mod-Mughabghab v1,2.84E+08,Bq / kgU
+Pickering-A 19558C,sb125,ENDF VII.0 + mod-Mughabghab v1,2.70E+09,Bq / kgU
+Pickering-A 19558C,i129,ENDF VII.0 + mod-Mughabghab v1,3.02E+05,Bq / kgU
+Pickering-A 19558C,cs134,ENDF VII.0 + mod-Mughabghab v1,4.04E+09,Bq / kgU
+Pickering-A 19558C,cs137,ENDF VII.0 + mod-Mughabghab v1,7.83E+11,Bq / kgU
+Pickering-A 19558C,eu154,ENDF VII.0 + mod-Mughabghab v1,8.90E+09,Bq / kgU
+Pickering-A 19558C,eu155,ENDF VII.0 + mod-Mughabghab v1,3.80E+09,Bq / kgU
+Pickering-A 19558C,np237,ENDF VII.0 + mod-Mughabghab v1,9.76E+05,Bq / kgU
+Pickering-A 19558C,am241,ENDF VII.0 + mod-Mughabghab v1,1.94E+10,Bq / kgU
+Pickering-A 19558C,cm244,ENDF VII.0 + mod-Mughabghab v1,8.05E+08,Bq / kgU
+Pickering-A 19558C,u235,ENDF VII.1 + mod-Mughabghab v1,0.17%,at % / element
+Pickering-A 19558C,u236,ENDF VII.1 + mod-Mughabghab v1,0.08%,at % / element
+Pickering-A 19558C,u238,ENDF VII.1 + mod-Mughabghab v1,99.75%,at % / element
+Pickering-A 19558C,pu238,ENDF VII.1 + mod-Mughabghab v1,0.15%,at % / element
+Pickering-A 19558C,pu239,ENDF VII.1 + mod-Mughabghab v1,64.53%,at % / element
+Pickering-A 19558C,pu240,ENDF VII.1 + mod-Mughabghab v1,29.70%,at % / element
+Pickering-A 19558C,pu241,ENDF VII.1 + mod-Mughabghab v1,3.25%,at % / element
+Pickering-A 19558C,pu242,ENDF VII.1 + mod-Mughabghab v1,2.37%,at % / element
+Pickering-A 19558C,h3,ENDF VII.1 + mod-Mughabghab v1,2.21E+09,Bq / kgU
+Pickering-A 19558C,sr90,ENDF VII.1 + mod-Mughabghab v1,5.01E+11,Bq / kgU
+Pickering-A 19558C,tc99,ENDF VII.1 + mod-Mughabghab v1,1.53E+08,Bq / kgU
+Pickering-A 19558C,ru106,ENDF VII.1 + mod-Mughabghab v1,2.83E+08,Bq / kgU
+Pickering-A 19558C,sb125,ENDF VII.1 + mod-Mughabghab v1,2.70E+09,Bq / kgU
+Pickering-A 19558C,i129,ENDF VII.1 + mod-Mughabghab v1,3.01E+05,Bq / kgU
+Pickering-A 19558C,cs134,ENDF VII.1 + mod-Mughabghab v1,3.97E+09,Bq / kgU
+Pickering-A 19558C,cs137,ENDF VII.1 + mod-Mughabghab v1,7.82E+11,Bq / kgU
+Pickering-A 19558C,eu154,ENDF VII.1 + mod-Mughabghab v1,9.61E+09,Bq / kgU
+Pickering-A 19558C,eu155,ENDF VII.1 + mod-Mughabghab v1,4.00E+09,Bq / kgU
+Pickering-A 19558C,np237,ENDF VII.1 + mod-Mughabghab v1,9.62E+05,Bq / kgU
+Pickering-A 19558C,am241,ENDF VII.1 + mod-Mughabghab v1,1.94E+10,Bq / kgU
+Pickering-A 19558C,cm244,ENDF VII.1 + mod-Mughabghab v1,8.30E+08,Bq / kgU
