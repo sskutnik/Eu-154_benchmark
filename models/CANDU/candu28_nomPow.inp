@@ -1,0 +1,251 @@
+=t-depl parm=(centrm, addnux=3)
+candu 28-element assembly
+v7-238
+' --------------------
+'  template to generate libraries for ORIGEN-S 
+'  parameters are: 
+'u235wt%       - wt% U235
+'u234wt%       - wt% U234
+'u236wt%       - wt% U236
+'u238wt%       - wt% U238
+'ddd           - coolant density (g/cc)
+'Dancoff1      - Dancoff factor 1
+'Dancoff2      - Dancoff factor 2
+'Dancoff3      - Dancoff factor 3
+'namelibrary   - name of generated ORIGEN library
+'specpow       - average specific power
+'daystoburn    - depletion interval in days
+'  options are:    name          - candu 28 element
+'enrichment    - 0.711 (natural)
+'cool. density - 0.8445
+'Dancoff1      - 0.6770
+'Dancoff2      - 0.6650
+'Dancoff3      - 0.4260
+'spec. power   - 29.203
+'burnups       - 
+' --------------------
+' Documentation and Notes:
+'  - Information from "Verification and Validation of ORIGEN-S Code
+'    and Nuclear Data Libraries" ORNL RC-1429, COG-I-95-150
+'     
+'  - Validation of the ORIGEN-S code for predicting radionuclide 
+'    inventories in used CANDU fuel DOI:10.10.59/0022-3115(94)00683-0
+'
+'  - Nuclear Design Analysis of Wolsung-1 CANDU-PHW Nuclear 
+'    Generating Station IAEA RN:11522694
+'
+'  - Air gap was assumed to be air -- was not specified in documents
+'    as helium or another inert gas. Effects of using helium explored
+'    in report. 
+'
+'  - Note that d2o can be called directly if desired, calling d2o
+'    as a composition of deuterium and oxygen not necessarily required
+'  - by N. T. Shoman
+' --------------------
+' --------------------
+' Mixture data
+' --------------------
+read comp
+     ' fuel (natural uranium) -- Inner Ring
+     uo2     1 den=10.59 1 1003 
+                       92234 0.0054
+                       92235 0.7114
+                       92236 1.0E-20
+                       92238 99.2832 end				   
+     ' clad (Zircaloy)
+     zirc4  2 1 569 end 
+'
+     ' pressure tube (Zr-Nb 2.5%)
+     wtptclad        3 8.573  2
+                     40000 97.5
+                     41093 2.5
+                     1 559   end
+'
+    ' air gap (air fill gas -- not specified)
+    he           4 den=0.001205 1.0 559 end
+'
+   ' d2o coolant (99.75% purity d2o) 
+    d2o 5 den=0.8445 0.9975  545 end
+	h2o 5 den=0.8445 0.0025  545 end
+'	   
+    ' calandria tube
+    zirc4 6 1 360 end
+'
+    ' d2o moderator (99.91% purity d2o -- Outside calandria)
+    d2o 7 den=1.0838 0.9991 336  end
+    h2o 7 den=1.0838 0.0009 336  end	  
+'
+' --------------------
+' Additional materials for self-shielding
+' --------------------
+      ' clad
+      zirc4 21 1 569 end
+'
+      ' clad
+      zirc4 22  1 569 end
+'
+      ' d2o coolant (99.75% purity d2o -- Inside of pressure tube)
+	   d2o 51 den=0.8445 0.9975  545 end
+	   h2o 51 den=0.8445 0.0025  545 end	  
+'
+       ' d2o coolant (99.75% purity d2o -- Inside of pressure tube)
+	   d2o 52 den=0.8445 0.9975  545 end
+	   h2o 52 den=0.8445 0.0025  545 end	  
+'
+'fuel -- Middle Ring
+      uo2      10 den=10.59 1 1003 92234 0.0054
+                                  92235 0.7114
+      					          92236 0.0
+                                  92238 99.2832 end
+'fuel -- Outer Ring     
+      uo2      20 den=10.59 1 1003 92234 0.0054
+                                  92235 0.7114
+      					          92236 0.0
+                                  92238 99.2832 end
+'
+end comp
+' --------------------
+' Cell data 
+' --------------------
+read celldata
+    latticecell triangpitch fuelr=0.7120 1 cladr=0.7605 2 pitch=1.9125 5 end
+    centrm data
+      dan2pitch(1)=0.7145
+    end centrmdata
+    latticecell triangpitch fuelr=0.7120 10 cladr=0.7605 21 pitch=1.9283 51 end
+    centrm data
+      dan2pitch(10)=0.7074
+    end centrmdata
+    latticecell triangpitch fuelr=0.7120 20 cladr=0.7605 22 pitch=2.6433 52 end
+   centrm data
+     dan2pitch(20)=0.4480
+    end centrmdata
+end celldata
+' --------------------
+' Depletion data
+' --------------------
+read depletion
+       1 10 20 end
+end depletion
+' --------------------
+' Burn data
+' --------------------
+read burndata
+  power=28.41 burn=31.33 down=3.25 nlib=4 end
+  power=26.26 burn=15.38 down=5.61 nlib=4 end
+  power=28.15 burn=66.67 down=0.0 nlib=4 end
+  power=26.71 burn=66.67 down=9.0 nlib=4 end
+  power=26.07 burn=64.55 down=15.0 nlib=4 end 
+  power=24.18 burn=70.78 down=5590.0 nlib=4 end   
+end burndata
+read opus
+  units=gatoms
+  typarms=nucl
+  symnuc=u-235 u-236 u-238 pu-238 pu-239 pu-240 pu-241 pu-242 end
+  matl=20 end
+newcase
+  units=bequ
+  typarms=nucl
+  symnuc=h-3 sr-90 tc-99 ru-106 sb-125 i-129 cs-134 cs-137
+         eu-154 eu-155 np-237 am-241 cm-244 end
+end opus
+' --------------------
+' NEWT model data
+' --------------------
+read model
+candu 28-element
+read parm
+      echo=yes 
+      drawit=no
+      epsinner=-1.5e-4
+	  cmfd=yes 
+	  xycmfd=4 
+	  epsilon=8.0e-04
+end parm
+read materials
+       1  1  'inner fuel ring' end
+       2  1  'clad'  end
+       3  1  'pressure tube'  end
+       4  1  'air gap'        end
+       5  2  'coolant'       end
+       6  1  'calandria'      end
+       7  2  'moderator'      end
+       10 1 'middle fuel ring' end
+       20 1 'outer fuel ring' end
+end materials
+read geom
+      unit 1
+      com='fuel element (inner)'
+      cylinder 1 0.7120
+      cylinder 4 0.7605
+      media 1 1 1
+      media 2 1 -1 4
+      boundary 4 5 5
+      unit 10
+      com='fuel element (middle)'
+      cylinder 1 0.7120
+      cylinder 4 0.7605
+      media 10 1 1
+      media 2 1 -1 4
+      boundary 4 5 5
+      unit 20
+      com='fuel element (outer)'
+      cylinder 1 0.7120
+      cylinder 4 0.7605
+      media 20 1 1
+      media 2 1 -1 4
+      boundary 4 5 5
+	  unit 300
+	  com='pressure tube'
+      cylinder 101 5.1815 sides=20
+      cylinder 102 5.6965 sides=20
+      media 5 1 101
+      media 3 1 -101 102	  
+      com='air gap and calandria'	  
+      cylinder 103 6.5405 sides=20 
+      cylinder 104 6.6955 sides=20	
+      media 4 1 -102 103
+      media 6 1 -103 104	  
+      com='fuel elements ring 1'
+      com='1' hole 1 origin x=0.83085 y=0.83085
+      com='2' hole 1 origin x=-0.83085 y=0.83085
+      com='3' hole 1 origin x=-0.83085 y=-0.83085
+      com='4' hole 1 origin x=0.83085 y=-0.83085
+      com='fuel elements ring 2'
+      com='5' hole 10 origin x=2.480617 y=1.027505
+      com='6' hole 10 origin x=1.027505 y=2.480617
+      com='7' hole 10 origin x=-1.02751 y=2.480617
+      com='8' hole 10 origin x=-2.48062 y=1.027505
+      com='9' hole 10 origin x=-2.48062 y=-1.027505
+      com='10' hole 10 origin x=-1.02751 y=-2.480616
+      com='11' hole 10 origin x=1.027505 y=-2.48062
+      com='12' hole 10 origin x=2.480617 y=-1.02751
+      com='fuel elements ring 3'
+      com='13' hole 20 origin x=4.147741 y=0.825037
+      com='14' hole 20 origin x=3.516285 y=2.349507
+      com='15' hole 20 origin x=2.349507 y=3.516285
+      com='16' hole 20 origin x=0.825037 y=4.147741
+      com='17' hole 20 origin x=-0.82504 y=4.147741
+      com='18' hole 20 origin x=-2.34951 y=3.516258
+      com='19' hole 20 origin x=-3.51628 y=2.349507
+      com='20' hole 20 origin x=-4.14774 y=0.825037
+      com='21' hole 20 origin x=-4.14774 y=-0.825037
+      com='22' hole 20 origin x=-3.51628 y=-2.34951
+      com='23' hole 20 origin x=-2.34951 y=-3.51628
+      com='24' hole 20 origin x=-0.82504 y=-4.14774
+      com='25' hole 20 origin x=0.82504 y=-4.14774
+      com='26' hole 20 origin x=2.349507 y=-3.51628
+      com='27' hole 20 origin x=3.516258 y=-2.34951
+      com='28' hole 20 origin x=4.147741 y=-0.82504 
+      boundary 104 15 15 
+      global unit 400
+      cuboid 1 4p14.2875	  
+      media 7 1 1
+	  hole 300
+      boundary 1 25 25
+end geom
+read bounds
+      all=refl
+end bounds
+end model
+end

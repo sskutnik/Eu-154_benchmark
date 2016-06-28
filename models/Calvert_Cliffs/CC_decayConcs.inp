@@ -1,0 +1,27 @@
+=shell
+   cp ${RTNDIR}/CC_MKP-109-CC_87-72_loPow.f71 ${TMPDIR}
+end
+=origen
+case(KRI_Decay){
+    lib { file="end7dec" }
+    mat {
+        load{ file="CC_MKP-109-CC_87-72_loPow.f71" pos=34 }
+    }
+    time{
+        start=1870
+        t[8L 1870.1 4717.0]
+        units="days"
+    }
+    save{ file="decay_CC.f71" steps=last }
+}
+end
+=opus
+    data="decay_CC.f71"    
+    typarams=nuclides
+    nposition=1 end
+    units=grams
+    time=days
+    symnuc= sm-147 sm-148 sm-149 sm-150 sm-151 sm-152 sm-154
+            eu-151 eu-152 eu-153 eu-154 eu-155 
+            gd-154 gd-155 gd-156 gd-158 gd-160 end
+end
