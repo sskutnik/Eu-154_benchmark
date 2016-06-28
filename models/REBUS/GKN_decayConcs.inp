@@ -1,0 +1,170 @@
+=shell
+  cp $RTNDIR/GKN.ft71 ${TMPDIR}
+end
+=origen
+case(CeEuCsDecay){
+    lib { file="end7dec" }
+    mat {
+        load{ file="GKN.ft71" pos=48 }
+    }
+    time{
+        start=0.0
+        t[8L 1.0 2600.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(CmDecay){
+    time{
+        start=2600.0
+        t[8L 2600.1 2601.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(PuDecay){
+    time{
+        start=2601.0
+        t[8L 2601.1 2635.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(CsDecay){
+    time{
+        start=2635.0
+        t[8L 2635.1 2648.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(UDecay){
+    time{
+        start=2648.0
+        t[8L 2648.1 2672.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(SmEuGdDecay){
+    time{
+        start=2672.0
+        t[8L 2672.1 2735.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(NdDecay){
+    time{
+        start=2735.0
+        t[8L 2735.1 2753.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(AmCmDecay){
+    time{
+        start=2753.0
+        t[8L 2753.1 2760.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(NpFpDecay){
+    time{
+        start=2760.0
+        t[8L 2760.1 2813.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+case(Cm245Decay){
+    time{
+        start=2813.0
+        t[8L 2813.1 2846.0]
+        units="days"
+    }
+    save{ file="decay_GKN.ft71" steps=last }
+}
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=1 end
+    units=grams
+    time=days
+    symnuc= Ce-144 Eu-154 Eu-155 Cs-137 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=2 end
+    units=grams
+    time=days
+    symnuc= Cm-242 Cm-244 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=3 end
+    units=grams
+    time=days
+    symnuc= Pu-238 Pu-239 Pu-240 Pu-241 Pu-242 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=4 end
+    units=grams
+    time=days
+    symnuc= Cs-133 Cs-135 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=5 end
+    units=grams
+    time=days
+    symnuc= U-234 U-235 U-236 U-238 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=6 end
+    units=grams
+    time=days
+    symnuc= Sm-147 Sm-148 Sm-149 Sm-150 Sm-151 Sm-152 Sm-154 
+            Eu-153 Gd-155 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=7 end
+    units=grams
+    time=days
+    symnuc= Nd-142 Nd-143 Nd-144 Nd-145 Nd-146 Nd-148 Nd-150 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=8 end
+    units=grams
+    time=days
+    symnuc= Cm-243 Am-241 Am-242m Am-243 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=9 end
+    units=grams
+    time=days
+    symnuc= Np-237 Mo-95 Tc-99 Ru-101 Rh-103 Pd-105 Pd-108 Ag-109 end
+end
+=opus
+    data="decay_GKN.ft71"    
+    typarams=nuclides
+    nposition=10 end
+    units=grams
+    time=days
+    symnuc= Cm-245 end
+end

@@ -1,0 +1,159 @@
+=shell
+   cp ${RTNDIR}/ARIANE_GU1.f71 ${TMPDIR}/GU1.f71
+end
+=origen
+case(CeDecay){
+    lib { file="end7dec" }
+    mat {
+        load{ file="GU1.f71" pos=66 }
+    }
+    time{
+        start=0.0
+        t[8L 1.0 1000.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+case(AmUDecay){
+    time{
+        start=1000.0
+        t[8L 1000.1 1040.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+case(NdDecay){
+    time{
+        start=1040.0
+        t[8L 1040.1 1042.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+
+case(PuDecay){
+    time{
+        start=1042.0
+        t[8L 1042.1 1053.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+
+case(SmEuGdDecay){
+    time{
+        start=1053.0
+        t[8L 1053.1 1054.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+case(CsDecay){
+    time{
+        start=1054.0
+        t[8L 1054.1 1091.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+case(CmDecay){
+    time{
+        start=1091.0
+        t[8L 1091.1 1096.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+case(SrDecay){
+    time{
+        start=1096.0
+        t[8L 1096.1 1116.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+case(MoTcRuAgDecay){
+    time{
+        start=1116.0
+        t[8L 1116.1 2137.0]
+        units="days"
+    }
+    save{ file="decay_GU1.f71" steps=last }
+}
+end
+' Decay output for Ce
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=1 end
+    units=grams
+    time=days
+    symnuc= Ce-144 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=2 end
+    units=grams
+    time=days
+    symnuc= U-234 U-235 U-236 U-238 Am-241 Am-242m Am-243 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=3 end
+    units=grams
+    time=days
+    symnuc= Nd-142 Nd-143 Nd-144 Nd-145 Nd-146 Nd-148 Nd-150 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=4 end
+    units=grams
+    time=days
+    symnuc= Pu-238 Pu-239 Pu-240 Pu-241 Pu-242 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=5 end
+    units=grams
+    time=days
+    symnuc= Sm-147 Sm-148 Sm-149 Sm-150 Sm-151 Sm-152 Sm-154 Eu-151 Eu-153 Eu-154 Eu-155 Gd-155 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=6 end
+    units=grams
+    time=days
+    symnuc= Cs-133 Cs-134 Cs-135 Cs-137 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=7 end
+    units=grams
+    time=days
+    symnuc= Cm-242 Cm-243 Cm-244 Cm-245 Cm-246 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=8 end
+    units=grams
+    time=days
+    symnuc= Sr-90 end
+end
+=opus
+    data="decay_GU1.f71"    
+    typarams=nuclides
+    nposition=9 end
+    units=grams
+    time=days
+    symnuc= Mo-95 Tc-99 Ru-101 Rh-103 Ag-109 end
+end
+=shell
+  cp decay_GU1.f71 ${RTNDIR}
+end

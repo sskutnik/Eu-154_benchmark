@@ -1,0 +1,274 @@
+=t-depl parm=(addnux=3)
+Gosgen 15x15 PWR. Sample GU1. Nd-148 burnup 60.75 GWd/MTU.
+v7-238
+'=============================================================================
+read alias
+ $fuel 10-14 end
+ $clad 20-24 end
+ $mod 30-34 end
+ $gap 40-44 end
+end alias
+'=============================================================================
+read comp
+' fuel
+ uo2 $fuel den=10.4 1 1151.3 
+   92234 0.036
+   92235 3.500
+   92238 96.464 end
+' clad
+ zirc4 $clad 1 619 end
+' moderator
+ h2o $mod den=0.7299 1 571.6 end
+ wtptbor $mod 0.7299 1 5000 100 1511e-06 571.6 end
+' gap
+ n $gap den=0.00125 1 619 end
+end comp
+'=============================================================================
+read celldata
+latticecell squarepitch pitch=1.43 $mod
+  fueld=0.913 $fuel 
+  cladd=1.075 $clad
+  gapd=0.93 $gap end
+end celldata
+'=============================================================================
+read depletion
+10 -11 12 13 14
+end depletion
+'=============================================================================
+read burndata
+power= 59.19 burn=6     down=0  nlib=1 end
+power= 59.19 burn=288.9 down=0  nlib=5 end
+power= 53.50 burn=22.1  down=45 nlib=1 end
+power= 47.03 burn=6     down=0  nlib=1 end
+power= 47.03 burn=286.3 down=0  nlib=6 end
+power= 41.05 burn=29    down=27 nlib=1 end
+power= 44.74 burn=6     down=0  nlib=1 end
+power= 44.74 burn=284.1 down=0  nlib=5 end
+power= 32.22 burn=41.2  down=50 nlib=1 end
+power= 36.28 burn=6     down=0  nlib=1 end
+power= 36.28 burn=295.9 down=0  nlib=5 end
+power= 31.57 burn=24.8  down=0  nlib=1 end    
+end burndata
+'=============================================================================
+read opus
+ matl=11 end
+ units=grams time=days
+ symnuc=u-234 u-235 u-236 u-238 
+        pu-238 pu-239 pu-240 pu-241 pu-242 np-237 
+        am-241 am-242m am-243 cm-242 cm-243 cm-244 cm-245 cm-246 
+        cs-133 cs-134 cs-135 cs-137 ce-144 
+        nd-142 nd-143 nd-144 nd-145 nd-146 nd-148 nd-150 
+        pm-147 sm-147 sm-148 sm-149 sm-150 sm-151 sm-152 sm-154 
+        eu-151 eu-153 eu-154 eu-155 
+        gd-155 sr-90 mo-95 tc-99 ru-101 ru-106 rh-103 ag-109 sb-125 end
+end opus
+'=============================================================================
+read timetable
+' soluble boron in moderator
+densmult $mod 2 5010 5011
+0 1.000
+6 0.780
+150 0.374
+295 0.005
+330 0.005
+361.99 0.005
+362 0.977
+368 0.758
+512 0.359
+654 0.005
+694 0.005
+709.99 0.005
+710 1.004
+716 0.780
+860 0.363
+1000 0.003
+1065 0.003
+1090.99 0.003
+1091 1.055
+1097 0.823
+1241 0.400
+1393 0.003
+1429 0.003 end
+' fuel temperature
+temperature $fuel
+0 1151.3
+6 1171.5
+150 1136.0
+295 1078.3
+330 1046.7
+362 919.3
+368 967.7
+512 957.9
+654 943.1
+694 842.0
+710 888.9
+716 894.4
+860 854.8
+1000 841.4
+1065 709.8
+1091 806.6
+1097 829.8
+1241 810.6
+1393 804.0
+1429 738.9 end
+end timetable
+'=============================================================================
+read model
+Gosgen 15x15 PWR. Sample GU1.
+read parm
+ run=yes drawit=yes echo=yes
+ cmfd=rect cmfd2g=yes xycmfd=4 epsinner=-1e-4  
+end parm
+read materials
+ mix=10 pn=1 com="Regular pin" end
+ mix=20 pn=1 com="Clad" end
+ mix=30 pn=2 com="Water moderator" end
+ mix=40 pn=1 com="Gap" end
+ mix=11 pn=1 com="Test pin"  end
+ mix=12 pn=1 com="N test pin" end
+ mix=13 pn=1 com="E test pin" end
+ mix=14 pn=1 com="S test pin" end
+end materials
+read geom
+unit 1
+com='fuel pin cell'
+cylinder 1 0.4565
+cylinder 2 0.465
+cylinder 3 0.5375
+cuboid 4 4p0.715
+media 10 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 11
+com='bottom half fuel pin cell'
+cylinder 1 0.4565 chord -y=0
+cylinder 2 0.465 chord -y=0
+cylinder 3 0.5375 chord -y=0
+cuboid 4 2p0.715 0.0 -0.715
+media 10 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 2
+unit 12
+com='right half fuel pin cell'
+cylinder 1 0.4565 chord +x=0
+cylinder 2 0.465 chord +x=0
+cylinder 3 0.5375 chord +x=0
+cuboid 4 0.715 0.0 2p0.715
+media 10 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 2 4
+unit 13
+com='bottom right quarter fuel pin cell'
+cylinder 1 0.4565 chord +x=0 chord -y=0
+cylinder 2 0.465 chord +x=0 chord -y=0
+cylinder 3 0.5375 chord +x=0 chord -y=0
+cuboid 4 0.715 0.0 0.0 -0.715
+media 10 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 2 2
+unit 2
+com='test pin cell'
+cylinder 1 0.4565
+cylinder 2 0.465
+cylinder 3 0.5375
+cuboid 4 4p0.715
+media 11 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 3
+com='N neigbor of test pin'
+cylinder 1 0.4565
+cylinder 2 0.465
+cylinder 3 0.5375
+cuboid 4 4p0.715
+media 12 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 4
+com='E neigbor of test pin'
+cylinder 1 0.4565
+cylinder 2 0.465
+cylinder 3 0.5375
+cuboid 4 4p0.715
+media 13 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 5
+com='S neigbor of test pin'
+cylinder 1 0.4565
+cylinder 2 0.465
+cylinder 3 0.5375
+cuboid 4 4p0.715
+media 14 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 6
+com='guide tube'
+cylinder 1 0.62
+cylinder 2 0.69
+cuboid 3 4p0.715
+media 30 1 1
+media 20 1 2 -1
+media 30 1 3 -2
+boundary 3 4 4
+unit 61
+com='bottom half guide tube'
+cylinder 1 0.62 chord -y=0
+cylinder 2 0.69 chord -y=0
+cuboid 3 2p0.715 0.0 -0.715
+media 30 1 1
+media 20 1 2 -1
+media 30 1 3 -2
+boundary 3 4 2
+unit 62
+com='right half guide tube'
+cylinder 1 0.62 chord +x=0
+cylinder 2 0.69 chord +x=0
+cuboid 3 0.715 0.0 2p0.715
+media 30 1 1
+media 20 1 2 -1
+media 30 1 3 -2
+boundary 3 2 4
+global unit 10
+cuboid 10 10.78 0.0 10.78 0.0
+array 1 10 place 1 1 0.0 0.77
+media 30 1 10
+boundary 10 30 30
+end geom
+read array
+ara=1 nux=8 nuy=8 typ=cuboidal
+fill
+12 1 1 1 1 1 1 1
+12 1 1 5 1 1 1 1
+12 1 6 2 4 6 1 1
+12 1 1 3 1 1 1 1
+62 1 1 6 1 1 1 1
+12 1 1 1 1 6 1 1
+12 1 1 1 1 1 1 1
+13 11 11 61 11 11 11 11 end fill
+end array
+read bounds
+all=refl
+end bounds
+end model
+'=============================================================================
+end
+=shell
+cp ft71f001 $RTNDIR/GU1.f71
+end

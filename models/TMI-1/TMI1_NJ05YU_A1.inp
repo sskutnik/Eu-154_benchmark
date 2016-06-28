@@ -1,0 +1,308 @@
+=t-depl parm=(centrm,addnux=3)
+TMI-1 NJ05YU AG616-A1
+v7-238
+' ----------------------------------------------------------------
+'  template to generate libraries for ORIGEN-S 
+'  parameters are: 4.013          - wt% 4.013
+'                  0.040       - wt% U234
+'                  0       - wt% U236
+'                  95.947      - wt% U238
+'                  namelibraryo  - name of ORIGEN library created
+' ----------------------------------------------------------------
+' Mixture data
+' ----------------------------------------------------------------
+read alias
+  $fuel 1 11-14 end
+  $clad 2 21-24 end
+  $mod  3 31-34 end
+  $gap  4 41-44 end
+  $control 6 end
+  $mixmod 3 36 end
+end alias
+read comp
+' fuel
+ uo2  $fuel den=10.196 1 906 92234 0.040 
+                             92235 4.013 
+                             92236 1E-14 
+                             92238 95.947 end 
+' clad
+ zirc4 $clad  1 640 end 
+' gap
+ n  $gap den=0.00125 1 595 end
+' water moderator with 1670 ppm initial soluble boron 
+ h2o     $mod den=0.6965 1                   579 end
+ wtptbor $mod 0.6965     1 5000 100 1670e-06 579 end
+' Swapped moderator
+ h2o     36 den=0.6965 1               579 end
+ wtptbor 36 0.6965 1 5000 100 1670e-06 579 end
+' guide tube
+ zirc4 5 1 579 end 
+'al2o3/b4c control rods
+ al2o3 $control den=3.7 0.983 579 end
+ b4c   $control den=3.7 0.017 579 end
+end comp
+' ----------------------------------------------------------------
+' Cell data
+' ----------------------------------------------------------------
+read celldata
+  latticecell squarepitch pitch=1.44272 $mod
+                          fueld=0.9362  $fuel
+                          gapd=0.95758  $gap
+                          cladd=1.0922  $clad
+                          end                                            
+end celldata
+' ----------------------------------------------------------------
+' Depletion data
+' ----------------------------------------------------------------
+read depletion 
+ 1 11 12 13 -14 flux $control
+end depletion
+' ----------------------------------------------------------------
+' Burn data
+' ----------------------------------------------------------------
+read burndata
+ power=30.580  burn=74.2  down=0  nlib=2 end
+ power=33.309  burn=69.9  down=0  nlib=2 end
+ power=34.811  burn=69.9  down=0  nlib=2 end
+ power=36.595  burn=70.9  down=0  nlib=2 end
+ power=38.559  burn=64.8  down=0  nlib=2 end
+ power=39.506  burn=75.3  down=0  nlib=2 end
+ power=40.747  burn=58.9  down=0  nlib=2 end 
+ power=41.338  burn=65.3  down=0  nlib=2 end
+ power=41.700  burn=58.8  down=0  nlib=2 end
+ power=46.740  burn=31.4  down=36 nlib=2 end
+ power=29.608  burn=68.0  down=0  nlib=1 end
+ power=30.270  burn=63.8  down=0  nlib=1 end
+ power=31.505  burn=77.2  down=0  nlib=1 end
+ power=32.566  burn=63.1  down=0  nlib=1 end
+ power=33.557  burn=75.3  down=0  nlib=1 end
+ power=34.376  burn=69.0  down=0  nlib=1 end
+ power=34.969  burn=70.0  down=0  nlib=1 end
+ power=35.346  burn=69.9  down=0  nlib=1 end
+ power=35.799  burn=69.8  down=0  nlib=1 end
+ power=36.045  burn=34.2  down=6514 nlib=1 end
+end burndata
+read timetable
+ density $mixmod 2 5010 5011
+  0.0       1.0
+  74.2      0.88683
+  144.1     0.80359
+  214.0     0.70359
+  284.9     0.59281
+  349.7     0.46228
+  425.0     0.32635
+  483.9     0.21078
+  549.2     0.08024
+  608.0     0.00778
+  639.4     0.00120
+  675.4     1.07784
+  743.4     0.98743
+  807.2     0.91078
+  884.4     0.79162
+  947.5     0.68263
+  1022.8    0.54970
+  1091.8    0.42994
+  1161.8    0.30299
+  1231.7    0.17844
+  1301.5    0.06168
+  1335.7    0.00108 end
+ density $mixmod 2 1001 8016
+  0.0      1
+  74.2     1
+  144.1    1
+  214.0    0.99586
+  284.9    1
+  349.7    1
+  425.0    1
+  483.9    1
+  549.2    1.00429
+  608.0    1.01287
+  639.4    1.03950
+  675.4    1.01287
+  743.4    1.01731
+  807.2    1.01731
+  884.4    1.01731
+  947.5    1.01731
+  1022.8   1.01731
+  1091.8   1.01731
+  1161.8   1.01731
+  1231.7   1.02160 
+  1301.5   1.02160
+  1335.7   1.02160 end
+ temperature 14
+  0.0      960.5
+  74.2     960.5
+  144.1    961.5
+  214.0    946.9
+  284.9    952.7
+  349.7    937.6
+  425.0    931.7
+  483.9    920.8
+  549.2    908.9
+  608.0    918.9
+  639.4    750.5
+  675.4    796.1
+  743.4    796.1
+  807.2    808.4
+  884.4    809.1
+  947.5    809.7
+  1049.8   812.3
+  1091.8   814.8
+  1161.8   816.3
+  1231.7   817.3
+  1301.5   816.5
+  1335.7   812.8 end
+ swap 6  36  0.0 0  675.4 1 end
+end timetable
+read opus
+ matl=14 end
+ units=grams time=days
+ symnuc=u-233 u-234 u-235 u-236 u-238
+       pu-238 pu-239 pu-240 pu-241 pu-242
+       np-237 am-241 am-243 cm-244
+       cs-133 cs-134 cs-135 cs-137 ce-140 ce-142 
+       nd-142 nd-143 nd-144 nd-145 nd-146 nd-148 nd-150
+       sm-147 sm-148 sm-149 sm-150 sm-151 sm-152 sm-154
+       eu-151 eu-152 eu-153 eu-154 eu-155
+       gd-152 gd-154 gd-155 gd-156 gd-157 gd-158 gd-160
+       ag-109 mo-95 rh-103 tc-99  end
+ end opus
+' ----------------------------------------------------------------
+' NEWT model data
+' ----------------------------------------------------------------
+read model
+PWR BW 15x15  
+read parm
+ echo=yes drawit=no run=yes
+ cmfd=rect cmfd2g=yes xycmfd=4 epsinner=-1e-4 
+end parm
+read materials
+ mix=1   pn=1  com="fuel (general)"    end
+ mix=11  pn=1  com="Fuel (West)"       end
+ mix=12  pn=1  com="Fuel (South)"      end
+ mix=13  pn=1  com="Fuel (North)"      end
+ mix=14  pn=1  com="Fuel pin H6"       end
+ mix=2   pn=1  com="Clad"              end
+ mix=3   pn=2  com="Moderator"         end
+ mix=4   pn=1  com="Gap"               end
+ mix=5   pn=1  com="Guide tube"        end
+ mix=6   pn=1  com="Al2O3-B4C control" end
+ mix=36  pn=2  com="Moderator (swap)"  end
+end materials
+read geom
+unit 1 
+com='fuel rod (general)'
+ cylinder 10 0.4681
+ cylinder 20 0.47879
+ cylinder 30 0.5461
+ cuboid   40  4p0.72136
+ media 1 1 10
+ media 4 1 20 -10
+ media 2 1 30 -20
+ media 3 1 40 -30
+ boundary  40 4 4
+ unit 11
+com='fuel rod (W)'
+ cylinder 10 0.4681
+ cylinder 20 0.47879
+ cylinder 30 0.5461
+ cuboid   40  4p0.72136
+ media 11 1 10
+ media 4 1 20 -10
+ media 2 1 30 -20
+ media 3 1 40 -30
+ boundary  40 4 4
+ unit 12 
+com='fuel rod (S)'
+ cylinder 10 0.4681
+ cylinder 20 0.47879
+ cylinder 30 0.5461
+ cuboid   40  4p0.72136
+ media 12 1 10
+ media 4 1 20 -10
+ media 2 1 30 -20
+ media 3 1 40 -30
+ boundary  40 4 4
+ unit 13
+com='fuel rod (N)'
+ cylinder 10 0.4681
+ cylinder 20 0.47879
+ cylinder 30 0.5461
+ cuboid   40  4p0.72136
+ media 13 1 10
+ media 4 1 20 -10
+ media 2 1 30 -20
+ media 3 1 40 -30
+ boundary  40 4 4
+ unit 14 
+com='fuel rod H6'
+ cylinder 10 0.4681
+ cylinder 20 0.47879
+ cylinder 30 0.5461
+ cuboid   40  4p0.72136
+ media 14 1 10
+ media 4 1 20 -10
+ media 2 1 30 -20
+ media 3 1 40 -30
+ boundary  40 6 6
+unit 5
+com='b4c'
+' cylinder 10 0.08636 
+' cylinder 11 0.17272 
+' cylinder 12 0.25908 
+' cylinder 13 0.34544 
+ cylinder 14 0.4318 
+ cylinder 20 0.4572 
+ cylinder 30 0.5461 
+ cylinder 31 0.63246 
+ cylinder 32 0.67310 
+ cuboid   40 4p0.72136 
+' Just do one solid rod of B4C
+ media 6 1  14
+ media 4 1 -14 20
+ media 2 1 -20 30 
+ media 3 1 -30 31
+ media 2 1 -31 32
+ media 3 1 -32 40
+ boundary  40 6 6
+unit 6
+com='instrument tube'
+ cylinder 10 0.56007
+ cylinder 20 0.62611
+ cuboid   40  4p0.72136
+ media 3 1 10
+ media 5 1 20 -10
+ media 3 1 40 -20
+ boundary  40 4 4
+global unit 10
+com='full assembly'
+ cuboid 10 21.81098 0.0 21.81098 0.0 
+ array 1 10  place 1 1 0.80645 0.80645
+ media 3 1 10
+ boundary 10 30 30
+end geom
+read array
+ ara=1 nux=15 nuy=15 typ=cuboidal 
+ fill
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+  1  1  1  1  1  5  1  1  1  5  1  1  1  1  1
+  1  1  1  5  1  1  1  1  1  1  1  5  1  1  1
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+  1  1  5  1  1  5  1  1  1  5  1  1  5  1  1
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+  1  1  1  1  1  1  1  6  1  1  1  1  1  1  1
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+  1  1  5  1  1  5  1  1  1  5  1  1  5  1  1
+  1  1  1  1  1  1  1  1  1  1  12 1  1  1  1
+  1  1  1  5  1  1  1  1  1  11 14 5  1  1  1
+  1  1  1  1  1  5  1  1  1  5  13 1  1  1  1
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+ end fill
+end array
+read bounds 
+ all=refl 
+end bounds
+end model
+end

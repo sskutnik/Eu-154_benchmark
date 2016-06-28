@@ -1,0 +1,382 @@
+=t-depl parm=(addnux=3)
+GKN II 18x18 PWR Assembly FA 419 Pin M11 REBUS program
+v7-238
+'=============================================================================
+read alias
+  $fuel1 10-15 end
+  $clad1 20-25 end
+  $mod1 30-35 end
+  $gap1 40-45 end
+  $fuel2 50-54 end
+  $clad2 60 end
+  $mod2 70 end
+  $gap2 80 end
+end alias
+'=============================================================================
+read comp
+ uo2 $fuel1 den=10.4 1.0 1018.04 
+     92234 0.036
+     92235 3.798
+     92238 96.166 end
+ zirc4 $clad1 1 619 end
+ h2o $mod1 den=0.646 1.0 605.01 end
+ n $gap1 den=0.00125 1.0 619 end
+ wtptbor $mod1 0.646 1 5000 100 974.4e-6 605.01 end
+ gd2o3 $fuel2 den=10.13 0.07 1018.04 end
+ uo2   $fuel2 den=10.13 0.93 1018.04
+         92234 1E-14
+         92235 2.6
+         92238 97.4 end
+ zirc4 $clad2 1 619 end
+ h2o $mod2 den=0.646 1.0 605.01 end
+ wtptbor $mod2 0.646 1 5000 100 974.4e-6 605.01 end
+ n $gap2 den=0.00125 1.0 619 end
+end comp
+'=============================================================================
+read celldata
+  latticecell squarepitch pitch=1.27 $mod1
+  fuelr=0.4025 $fuel1
+  cladr=0.475 $clad1
+  gapr=0.411 $gap1 end
+  multiregion cylindrical right_bdy=white end
+     50 0.180
+     51 0.2545
+     52 0.3318
+     53 0.3600
+     54 0.4025
+     80 0.4110
+     60 0.4750
+     70 0.904078   
+  end zone
+end celldata
+'=============================================================================
+read timetable
+density $mod1 2 5010 5011
+ 6   1.0000
+ 30   0.9078
+ 60   0.8111
+ 90   0.7061
+ 120   0.6040
+ 150   0.5068
+ 180   0.4152
+ 210   0.3193
+ 240   0.2143
+ 270   0.1029
+ 295.4   0.0104
+ 310   0.0104
+ 332   1.2178
+ 338   1.2178
+ 362   1.1277
+ 392   1.0344
+ 422   0.9308
+ 452   0.8287
+ 482   0.7313
+ 512   0.6393
+ 542   0.5482
+ 572   0.4474
+ 602   0.3352
+ 632   0.2200
+ 662   0.1054
+ 687   0.0104
+ 718.7   0.0104
+ 735.7   1.0522
+ 741.7   1.0522
+ 765.7   0.9595
+ 795.7   0.8635
+ 825.7   0.7584
+ 855.7   0.6552
+ 885.7   0.5565
+ 915.7   0.4634
+ 945.7   0.3684
+ 975.7   0.2641
+ 1005.7   0.1539
+ 1044.6   0.0081
+ 1083.6   0.0081
+ 1098.6   1.2727
+ 1104.6   1.2727
+ 1128.6   1.1598
+ 1158.6   1.0370
+ 1188.6   0.9054
+ 1218.6   0.7759
+ 1248.6   0.6496
+ 1278.6   0.5272
+ 1308.6   0.4095
+ 1338.6   0.2927
+ 1368.6   0.1754
+ 1411   0.0123
+ 1445.4   0.0123 end
+density $mod2 2 5010 5011
+ 6   1.0000
+ 30   0.9078
+ 60   0.8111
+ 90   0.7061
+ 120   0.6040
+ 150   0.5068
+ 180   0.4152
+ 210   0.3193
+ 240   0.2143
+ 270   0.1029
+ 295.4   0.0104
+ 310   0.0104
+ 332   1.2178
+ 338   1.2178
+ 362   1.1277
+ 392   1.0344
+ 422   0.9308
+ 452   0.8287
+ 482   0.7313
+ 512   0.6393
+ 542   0.5482
+ 572   0.4474
+ 602   0.3352
+ 632   0.2200
+ 662   0.1054
+ 687   0.0104
+ 718.7   0.0104
+ 735.7   1.0522
+ 741.6   1.0522
+ 741.7   1.0522
+ 765.7   0.9595
+ 795.7   0.8635
+ 825.7   0.7584
+ 855.7   0.6552
+ 885.7   0.5565
+ 915.7   0.4634
+ 945.7   0.3684
+ 975.7   0.2641
+ 1005.7   0.1539
+ 1044.6   0.0081
+ 1083.6   0.0081
+ 1098.6   1.2727
+ 1104.0   1.2727
+ 1128.6   1.1598
+ 1158.6   1.0370
+ 1188.6   0.9054
+ 1218.6   0.7759
+ 1248.6   0.6496
+ 1278.6   0.5272
+ 1308.6   0.4095
+ 1338.6   0.2927
+ 1368.6   0.1754
+ 1411.0   0.0123
+ 1445.4   0.0123 end
+density $mod1 3 1001 8016 8017
+ 0 1.000
+ 310 1.000
+ 332 1.029
+ 718.7 1.029
+ 735.7 1.053
+ 1083.6 1.053
+ 1098.6 1.122
+ 1445.4 1.122 end
+density $mod2 3 1001 8016 8017
+ 0 1.000
+ 310 1.000
+ 332 1.029
+ 718.7 1.029
+ 735.7 1.053
+ 1083.6 1.053
+ 1098.6 1.122
+ 1445.4 1.122 end
+temperature $fuel1
+ 0       1018.04
+ 310     1018.04
+ 332     904.25
+ 718.7   904.25
+ 735.7   819.69
+ 1083.6  819.69
+ 1098.6  646.13
+ 1445.4  646.13 end
+temperature $fuel2
+ 0       1018.04
+ 310     1018.04
+ 332     904.25
+ 718.7   904.25
+ 735.7   819.69
+ 1083.6  819.69
+ 1098.6  646.13
+ 1445.4  646.13 end
+temperature $mod1
+ 0       605.01
+ 310     605.01
+ 332     598.98
+ 718.7   598.98
+ 735.7   593.34
+ 1083.6  593.34
+ 1098.6  574.23
+ 1445.4  574.23 end
+temperature $mod2
+ 0       605.01
+ 310     605.01
+ 332     598.98
+ 718.7   598.98
+ 735.7   593.34
+ 1083.6  593.34
+ 1098.6  574.23
+ 1445.4  574.23 end
+end timetable
+'=============================================================================
+read depletion
+  10 -11 12 13 14 15 50
+end depletion
+'=============================================================================
+read burndata
+  power=56.265 burn=310.0 down=22 nlib=7 end
+  power=47.634 burn=386.7 down=17 nlib=6 end
+  power=40.820 burn=347.9 down=15 nlib=5 end
+  power=11.626 burn=346.8 down=0 nlib=2 end
+end burndata
+'=============================================================================
+read model
+GKN II 18x18 PWR Assembly FA 419
+read parm
+ echo=yes drawit=yes run=yes
+ cmfd=rect cmfd2g=yes xycmfd=4 epsinner=-1e-4 
+end parm
+read materials
+ mix=10 pn=1 com="Fuel" end
+ mix=20 pn=1 com="clad" end
+ mix=30 pn=2 com="moderator" end
+ mix=40 pn=1 com="gap" end
+ mix=11 pn=1 com="test rod" end
+ mix=12 pn=1 com="N test rod" end
+ mix=13 pn=1 com="S test rod" end
+ mix=14 pn=1 com="E test rod" end
+ mix=15 pn=1 com="W test rod" end
+ mix=50 pn=1 com="Fuel-gd #1" end
+ mix=51 pn=1 com="Fuel-gd #2" end
+ mix=52 pn=1 com="Fuel-gd #3" end
+ mix=53 pn=1 com="Fuel-gd #4" end
+ mix=54 pn=1 com="Fuel-gd #5" end
+end materials
+read geom
+unit 1
+com='fuel pin cell'
+cylinder 1 0.4025
+cylinder 2 0.411
+cylinder 3 0.475
+cuboid 4 4p0.635
+media 10 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 3
+com='guide tube'
+cylinder 1 0.555
+cylinder 2 0.616
+cuboid 3 4p0.635
+media 30 1 1
+media 20 1 2 -1
+media 30 1 3 -2
+boundary 3 4 4
+unit 4
+com='test pin cell'
+cylinder 1 0.4025
+cylinder 2 0.411
+cylinder 3 0.475
+cuboid 4 4p0.635
+media 11 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 41
+com='N test pin cell'
+cylinder 1 0.4025
+cylinder 2 0.411
+cylinder 3 0.475
+cuboid 4 4p0.635
+media 12 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 42
+com='S test pin cell'
+cylinder 1 0.4025
+cylinder 2 0.411
+cylinder 3 0.475
+cuboid 4 4p0.635
+media 13 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 43
+com='E test pin cell'
+cylinder 1 0.4025
+cylinder 2 0.411
+cylinder 3 0.475
+cuboid 4 4p0.635
+media 14 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 44
+com='W test pin cell'
+cylinder 1 0.4025
+cylinder 2 0.411
+cylinder 3 0.475
+cuboid 4 4p0.635
+media 15 1 1
+media 40 1 2 -1
+media 20 1 3 -2
+media 30 1 4 -3
+boundary 4 4 4
+unit 5
+com='UO2-Gd pin cell'
+cylinder 1 0.1800
+cylinder 2 0.2545
+cylinder 3 0.3118
+cylinder 4 0.3600
+cylinder 5 0.4025
+cylinder 6 0.4110
+cylinder 7 0.475
+cuboid 8 4p0.635
+media 50 1 1
+media 51 1 2 -1
+media 52 1 3 -2
+media 53 1 4 -3
+media 54 1 5 -4
+media 40 1 6 -5
+media 20 1 7 -6
+media 30 1 8 -7
+boundary 8 4 4
+global unit 10
+cuboid 10 23.116 0.0 23.116 0.0
+array 1 10 place 1 1 0.763 0.763
+media 30 1 10
+boundary 10 72 72
+end geom
+read array
+ara=1 nux= 18 nuy=18 typ=cuboidal
+fill
+1 1 1 1 1 1 1 1 1 1  1  1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1  1  1 1 1 1 1 1 1
+1 1 5 1 1 1 3 1 1 1  1  3 1 1 1 5 1 1
+1 1 1 3 1 1 1 1 5 1  1  1 1 1 3 1 1 1
+1 1 1 1 5 1 1 3 1 1  3  1 1 5 1 1 1 1
+1 1 1 1 1 3 1 1 1 1  1  1 3 1 1 1 1 1
+1 1 3 1 1 1 1 1 1 1 42  1 1 1 1 3 1 1
+1 1 1 1 3 1 1 1 1 44 4 43 1 3 1 1 1 1
+1 1 1 1 1 1 1 1 1 1 41  1 1 1 5 1 1 1
+1 1 1 5 1 1 1 1 1 1  1  1 1 1 1 1 1 1
+1 1 1 1 3 1 1 1 1 1  1  1 1 3 1 1 1 1
+1 1 3 1 1 1 1 1 1 1  1  1 1 1 1 3 1 1
+1 1 1 1 1 3 1 1 1 1  1  1 3 1 1 1 1 1
+1 1 1 1 5 1 1 3 1 1  3  1 1 5 1 1 1 1
+1 1 1 3 1 1 1 1 1 5  1  1 1 1 3 1 1 1
+1 1 5 1 1 1 3 1 1 1  1  3 1 1 1 5 1 1
+1 1 1 1 1 1 1 1 1 1  1  1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1  1  1 1 1 1 1 1 1 end fill
+end array
+read bounds
+all=refl
+end bounds
+end model
+end
+=shell
+cp ft71f001 $RTNDIR/GKN.ft71
+end
