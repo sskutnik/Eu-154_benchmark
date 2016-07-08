@@ -137,95 +137,95 @@ GKN-II,Eu-153,ENDF VII.0 + mod-Wright,2.102E-01
 GKN-II,Eu-154,ENDF VII.0 + mod-Wright,2.461E-02
 GKN-II,Eu-155,ENDF VII.0 + mod-Wright,5.628E-03
 GKN-II,Gd-155,ENDF VII.0 + mod-Wright,1.088E-02
-GKN-II,U-234,ENDF VII.0 + mod-Mughabghab v1,1.945E-01
-GKN-II,U-235,ENDF VII.0 + mod-Mughabghab v1,6.008E+00
-GKN-II,U-236,ENDF VII.0 + mod-Mughabghab v1,5.807E+00
-GKN-II,U-238,ENDF VII.0 + mod-Mughabghab v1,1.000E+03
-GKN-II,Np-237,ENDF VII.0 + mod-Mughabghab v1,8.162E-01
-GKN-II,Pu-238,ENDF VII.0 + mod-Mughabghab v1,4.249E-01
-GKN-II,Pu-239,ENDF VII.0 + mod-Mughabghab v1,7.040E+00
-GKN-II,Pu-240,ENDF VII.0 + mod-Mughabghab v1,3.682E+00
-GKN-II,Pu-241,ENDF VII.0 + mod-Mughabghab v1,1.482E+00
-GKN-II,Pu-242,ENDF VII.0 + mod-Mughabghab v1,1.186E+00
-GKN-II,Am-241,ENDF VII.0 + mod-Mughabghab v1,7.710E-01
-GKN-II,Am-242m,ENDF VII.0 + mod-Mughabghab v1,1.567E-03
-GKN-II,Am-243,ENDF VII.0 + mod-Mughabghab v1,3.465E-01
-GKN-II,Cm-242,ENDF VII.0 + mod-Mughabghab v1,4.424E-06
-GKN-II,Cm-243,ENDF VII.0 + mod-Mughabghab v1,7.323E-04
-GKN-II,Cm-244,ENDF VII.0 + mod-Mughabghab v1,1.345E-01
-GKN-II,Cm-245,ENDF VII.0 + mod-Mughabghab v1,1.593E-02
-GKN-II,Mo-95,ENDF VII.0 + mod-Mughabghab v1,1.241E+00
-GKN-II,Tc-99,ENDF VII.0 + mod-Mughabghab v1,1.334E+00
-GKN-II,Ru-101,ENDF VII.0 + mod-Mughabghab v1,1.358E+00
-GKN-II,Rh-103,ENDF VII.0 + mod-Mughabghab v1,7.752E-01
-GKN-II,Pd-105,ENDF VII.0 + mod-Mughabghab v1,7.674E-01
-GKN-II,Pd-108,ENDF VII.0 + mod-Mughabghab v1,3.153E-01
-GKN-II,Ag-109,ENDF VII.0 + mod-Mughabghab v1,1.418E-01
-GKN-II,Cs-133,ENDF VII.0 + mod-Mughabghab v1,1.840E+00
-GKN-II,Cs-135,ENDF VII.0 + mod-Mughabghab v1,6.532E-01
-GKN-II,Cs-137,ENDF VII.0 + mod-Mughabghab v1,1.792E+00
-GKN-II,Ce-144,ENDF VII.0 + mod-Mughabghab v1,5.085E-04
-GKN-II,Nd-142,ENDF VII.0 + mod-Mughabghab v1,5.059E-02
-GKN-II,Nd-143,ENDF VII.0 + mod-Mughabghab v1,1.216E+00
-GKN-II,Nd-144,ENDF VII.0 + mod-Mughabghab v1,2.399E+00
-GKN-II,Nd-145,ENDF VII.0 + mod-Mughabghab v1,1.074E+00
-GKN-II,Nd-146,ENDF VII.0 + mod-Mughabghab v1,1.298E+00
-GKN-II,Nd-148,ENDF VII.0 + mod-Mughabghab v1,6.571E-01
-GKN-II,Nd-150,ENDF VII.0 + mod-Mughabghab v1,3.266E-01
-GKN-II,Sm-147,ENDF VII.0 + mod-Mughabghab v1,3.276E-01
-GKN-II,Sm-148,ENDF VII.0 + mod-Mughabghab v1,2.961E-01
-GKN-II,Sm-149,ENDF VII.0 + mod-Mughabghab v1,2.818E-03
-GKN-II,Sm-150,ENDF VII.0 + mod-Mughabghab v1,5.260E-01
-GKN-II,Sm-151,ENDF VII.0 + mod-Mughabghab v1,1.604E-02
-GKN-II,Sm-152,ENDF VII.0 + mod-Mughabghab v1,1.561E-01
-GKN-II,Sm-154,ENDF VII.0 + mod-Mughabghab v1,7.459E-02
-GKN-II,Eu-153,ENDF VII.0 + mod-Mughabghab v1,2.102E-01
-GKN-II,Eu-154,ENDF VII.0 + mod-Mughabghab v1,2.663E-02
-GKN-II,Eu-155,ENDF VII.0 + mod-Mughabghab v1,5.556E-03
-GKN-II,Gd-155,ENDF VII.0 + mod-Mughabghab v1,1.075E-02
-GKN-II,U-234,ENDF VII.1 + mod-Mughabghab v1,1.976E-01
-GKN-II,U-235,ENDF VII.1 + mod-Mughabghab v1,5.941E+00
-GKN-II,U-236,ENDF VII.1 + mod-Mughabghab v1,5.798E+00
-GKN-II,U-238,ENDF VII.1 + mod-Mughabghab v1,1.000E+03
-GKN-II,Np-237,ENDF VII.1 + mod-Mughabghab v1,8.065E-01
-GKN-II,Pu-238,ENDF VII.1 + mod-Mughabghab v1,4.774E-01
-GKN-II,Pu-239,ENDF VII.1 + mod-Mughabghab v1,6.878E+00
-GKN-II,Pu-240,ENDF VII.1 + mod-Mughabghab v1,3.610E+00
-GKN-II,Pu-241,ENDF VII.1 + mod-Mughabghab v1,1.466E+00
-GKN-II,Pu-242,ENDF VII.1 + mod-Mughabghab v1,1.233E+00
-GKN-II,Am-241,ENDF VII.1 + mod-Mughabghab v1,7.538E-01
-GKN-II,Am-242m,ENDF VII.1 + mod-Mughabghab v1,1.651E-03
-GKN-II,Am-243,ENDF VII.1 + mod-Mughabghab v1,3.104E-01
-GKN-II,Cm-242,ENDF VII.1 + mod-Mughabghab v1,4.663E-06
-GKN-II,Cm-243,ENDF VII.1 + mod-Mughabghab v1,9.398E-04
-GKN-II,Cm-244,ENDF VII.1 + mod-Mughabghab v1,1.372E-01
-GKN-II,Cm-245,ENDF VII.1 + mod-Mughabghab v1,1.541E-02
-GKN-II,Mo-95,ENDF VII.1 + mod-Mughabghab v1,1.247E+00
-GKN-II,Tc-99,ENDF VII.1 + mod-Mughabghab v1,1.355E+00
-GKN-II,Ru-101,ENDF VII.1 + mod-Mughabghab v1,1.357E+00
-GKN-II,Rh-103,ENDF VII.1 + mod-Mughabghab v1,7.889E-01
-GKN-II,Pd-105,ENDF VII.1 + mod-Mughabghab v1,7.652E-01
-GKN-II,Pd-108,ENDF VII.1 + mod-Mughabghab v1,3.145E-01
-GKN-II,Ag-109,ENDF VII.1 + mod-Mughabghab v1,1.416E-01
-GKN-II,Cs-133,ENDF VII.1 + mod-Mughabghab v1,1.850E+00
-GKN-II,Cs-135,ENDF VII.1 + mod-Mughabghab v1,6.507E-01
-GKN-II,Cs-137,ENDF VII.1 + mod-Mughabghab v1,1.792E+00
-GKN-II,Ce-144,ENDF VII.1 + mod-Mughabghab v1,5.086E-04
-GKN-II,Nd-142,ENDF VII.1 + mod-Mughabghab v1,5.102E-02
-GKN-II,Nd-143,ENDF VII.1 + mod-Mughabghab v1,1.211E+00
-GKN-II,Nd-144,ENDF VII.1 + mod-Mughabghab v1,2.405E+00
-GKN-II,Nd-145,ENDF VII.1 + mod-Mughabghab v1,1.093E+00
-GKN-II,Nd-146,ENDF VII.1 + mod-Mughabghab v1,1.279E+00
-GKN-II,Nd-148,ENDF VII.1 + mod-Mughabghab v1,6.572E-01
-GKN-II,Nd-150,ENDF VII.1 + mod-Mughabghab v1,3.265E-01
-GKN-II,Sm-147,ENDF VII.1 + mod-Mughabghab v1,3.251E-01
-GKN-II,Sm-148,ENDF VII.1 + mod-Mughabghab v1,2.973E-01
-GKN-II,Sm-149,ENDF VII.1 + mod-Mughabghab v1,2.790E-03
-GKN-II,Sm-150,ENDF VII.1 + mod-Mughabghab v1,5.275E-01
-GKN-II,Sm-151,ENDF VII.1 + mod-Mughabghab v1,1.593E-02
-GKN-II,Sm-152,ENDF VII.1 + mod-Mughabghab v1,1.557E-01
-GKN-II,Sm-154,ENDF VII.1 + mod-Mughabghab v1,7.460E-02
-GKN-II,Eu-153,ENDF VII.1 + mod-Mughabghab v1,2.031E-01
-GKN-II,Eu-154,ENDF VII.1 + mod-Mughabghab v1,2.700E-02
-GKN-II,Eu-155,ENDF VII.1 + mod-Mughabghab v1,5.633E-03
-GKN-II,Gd-155,ENDF VII.1 + mod-Mughabghab v1,1.089E-02
+GKN-II,U-234,ENDF VII.0 + mod-Mughabghab,1.945E-01
+GKN-II,U-235,ENDF VII.0 + mod-Mughabghab,6.008E+00
+GKN-II,U-236,ENDF VII.0 + mod-Mughabghab,5.807E+00
+GKN-II,U-238,ENDF VII.0 + mod-Mughabghab,1.000E+03
+GKN-II,Np-237,ENDF VII.0 + mod-Mughabghab,8.162E-01
+GKN-II,Pu-238,ENDF VII.0 + mod-Mughabghab,4.249E-01
+GKN-II,Pu-239,ENDF VII.0 + mod-Mughabghab,7.040E+00
+GKN-II,Pu-240,ENDF VII.0 + mod-Mughabghab,3.682E+00
+GKN-II,Pu-241,ENDF VII.0 + mod-Mughabghab,1.482E+00
+GKN-II,Pu-242,ENDF VII.0 + mod-Mughabghab,1.186E+00
+GKN-II,Am-241,ENDF VII.0 + mod-Mughabghab,7.710E-01
+GKN-II,Am-242m,ENDF VII.0 + mod-Mughabghab,1.567E-03
+GKN-II,Am-243,ENDF VII.0 + mod-Mughabghab,3.465E-01
+GKN-II,Cm-242,ENDF VII.0 + mod-Mughabghab,4.424E-06
+GKN-II,Cm-243,ENDF VII.0 + mod-Mughabghab,7.323E-04
+GKN-II,Cm-244,ENDF VII.0 + mod-Mughabghab,1.345E-01
+GKN-II,Cm-245,ENDF VII.0 + mod-Mughabghab,1.593E-02
+GKN-II,Mo-95,ENDF VII.0 + mod-Mughabghab,1.241E+00
+GKN-II,Tc-99,ENDF VII.0 + mod-Mughabghab,1.334E+00
+GKN-II,Ru-101,ENDF VII.0 + mod-Mughabghab,1.358E+00
+GKN-II,Rh-103,ENDF VII.0 + mod-Mughabghab,7.752E-01
+GKN-II,Pd-105,ENDF VII.0 + mod-Mughabghab,7.674E-01
+GKN-II,Pd-108,ENDF VII.0 + mod-Mughabghab,3.153E-01
+GKN-II,Ag-109,ENDF VII.0 + mod-Mughabghab,1.418E-01
+GKN-II,Cs-133,ENDF VII.0 + mod-Mughabghab,1.840E+00
+GKN-II,Cs-135,ENDF VII.0 + mod-Mughabghab,6.532E-01
+GKN-II,Cs-137,ENDF VII.0 + mod-Mughabghab,1.792E+00
+GKN-II,Ce-144,ENDF VII.0 + mod-Mughabghab,5.085E-04
+GKN-II,Nd-142,ENDF VII.0 + mod-Mughabghab,5.059E-02
+GKN-II,Nd-143,ENDF VII.0 + mod-Mughabghab,1.216E+00
+GKN-II,Nd-144,ENDF VII.0 + mod-Mughabghab,2.399E+00
+GKN-II,Nd-145,ENDF VII.0 + mod-Mughabghab,1.074E+00
+GKN-II,Nd-146,ENDF VII.0 + mod-Mughabghab,1.298E+00
+GKN-II,Nd-148,ENDF VII.0 + mod-Mughabghab,6.571E-01
+GKN-II,Nd-150,ENDF VII.0 + mod-Mughabghab,3.266E-01
+GKN-II,Sm-147,ENDF VII.0 + mod-Mughabghab,3.276E-01
+GKN-II,Sm-148,ENDF VII.0 + mod-Mughabghab,2.961E-01
+GKN-II,Sm-149,ENDF VII.0 + mod-Mughabghab,2.818E-03
+GKN-II,Sm-150,ENDF VII.0 + mod-Mughabghab,5.260E-01
+GKN-II,Sm-151,ENDF VII.0 + mod-Mughabghab,1.604E-02
+GKN-II,Sm-152,ENDF VII.0 + mod-Mughabghab,1.561E-01
+GKN-II,Sm-154,ENDF VII.0 + mod-Mughabghab,7.459E-02
+GKN-II,Eu-153,ENDF VII.0 + mod-Mughabghab,2.102E-01
+GKN-II,Eu-154,ENDF VII.0 + mod-Mughabghab,2.663E-02
+GKN-II,Eu-155,ENDF VII.0 + mod-Mughabghab,5.556E-03
+GKN-II,Gd-155,ENDF VII.0 + mod-Mughabghab,1.075E-02
+GKN-II,U-234,ENDF VII.1 + mod-Mughabghab,1.976E-01
+GKN-II,U-235,ENDF VII.1 + mod-Mughabghab,5.941E+00
+GKN-II,U-236,ENDF VII.1 + mod-Mughabghab,5.798E+00
+GKN-II,U-238,ENDF VII.1 + mod-Mughabghab,1.000E+03
+GKN-II,Np-237,ENDF VII.1 + mod-Mughabghab,8.065E-01
+GKN-II,Pu-238,ENDF VII.1 + mod-Mughabghab,4.774E-01
+GKN-II,Pu-239,ENDF VII.1 + mod-Mughabghab,6.878E+00
+GKN-II,Pu-240,ENDF VII.1 + mod-Mughabghab,3.610E+00
+GKN-II,Pu-241,ENDF VII.1 + mod-Mughabghab,1.466E+00
+GKN-II,Pu-242,ENDF VII.1 + mod-Mughabghab,1.233E+00
+GKN-II,Am-241,ENDF VII.1 + mod-Mughabghab,7.538E-01
+GKN-II,Am-242m,ENDF VII.1 + mod-Mughabghab,1.651E-03
+GKN-II,Am-243,ENDF VII.1 + mod-Mughabghab,3.104E-01
+GKN-II,Cm-242,ENDF VII.1 + mod-Mughabghab,4.663E-06
+GKN-II,Cm-243,ENDF VII.1 + mod-Mughabghab,9.398E-04
+GKN-II,Cm-244,ENDF VII.1 + mod-Mughabghab,1.372E-01
+GKN-II,Cm-245,ENDF VII.1 + mod-Mughabghab,1.541E-02
+GKN-II,Mo-95,ENDF VII.1 + mod-Mughabghab,1.247E+00
+GKN-II,Tc-99,ENDF VII.1 + mod-Mughabghab,1.355E+00
+GKN-II,Ru-101,ENDF VII.1 + mod-Mughabghab,1.357E+00
+GKN-II,Rh-103,ENDF VII.1 + mod-Mughabghab,7.889E-01
+GKN-II,Pd-105,ENDF VII.1 + mod-Mughabghab,7.652E-01
+GKN-II,Pd-108,ENDF VII.1 + mod-Mughabghab,3.145E-01
+GKN-II,Ag-109,ENDF VII.1 + mod-Mughabghab,1.416E-01
+GKN-II,Cs-133,ENDF VII.1 + mod-Mughabghab,1.850E+00
+GKN-II,Cs-135,ENDF VII.1 + mod-Mughabghab,6.507E-01
+GKN-II,Cs-137,ENDF VII.1 + mod-Mughabghab,1.792E+00
+GKN-II,Ce-144,ENDF VII.1 + mod-Mughabghab,5.086E-04
+GKN-II,Nd-142,ENDF VII.1 + mod-Mughabghab,5.102E-02
+GKN-II,Nd-143,ENDF VII.1 + mod-Mughabghab,1.211E+00
+GKN-II,Nd-144,ENDF VII.1 + mod-Mughabghab,2.405E+00
+GKN-II,Nd-145,ENDF VII.1 + mod-Mughabghab,1.093E+00
+GKN-II,Nd-146,ENDF VII.1 + mod-Mughabghab,1.279E+00
+GKN-II,Nd-148,ENDF VII.1 + mod-Mughabghab,6.572E-01
+GKN-II,Nd-150,ENDF VII.1 + mod-Mughabghab,3.265E-01
+GKN-II,Sm-147,ENDF VII.1 + mod-Mughabghab,3.251E-01
+GKN-II,Sm-148,ENDF VII.1 + mod-Mughabghab,2.973E-01
+GKN-II,Sm-149,ENDF VII.1 + mod-Mughabghab,2.790E-03
+GKN-II,Sm-150,ENDF VII.1 + mod-Mughabghab,5.275E-01
+GKN-II,Sm-151,ENDF VII.1 + mod-Mughabghab,1.593E-02
+GKN-II,Sm-152,ENDF VII.1 + mod-Mughabghab,1.557E-01
+GKN-II,Sm-154,ENDF VII.1 + mod-Mughabghab,7.460E-02
+GKN-II,Eu-153,ENDF VII.1 + mod-Mughabghab,2.031E-01
+GKN-II,Eu-154,ENDF VII.1 + mod-Mughabghab,2.700E-02
+GKN-II,Eu-155,ENDF VII.1 + mod-Mughabghab,5.633E-03
+GKN-II,Gd-155,ENDF VII.1 + mod-Mughabghab,1.089E-02
