@@ -7,7 +7,6 @@ import re
 import itertools
 
 sns.set(style="ticks",font_scale=1.5)
-sns.set_context(rc={'lines.markeredgewidth': 1.0, 'lines.markeredgecolor': 'k', 'lines.linecolor': 'k'})
 
 IMAGE_DEST='./images/'
 TEX_DEST='./latex/'
@@ -123,7 +122,8 @@ def plotIsosFP(df_iso, assemName, seriesInfo, filename, burnups={},plotAspect=1.
 			mk.set_edgecolor('black')
 			mk.set_linewidth(0.075)
 
-	g.map_dataframe(facetErrorBars,"IsoNum","C/E","Sigma",ebDict,data=df_iso, hue='Evaluation',zorder=0,elinewidth=1.5,markeredgecolor='k',ls='')
+	g.map_dataframe(facetErrorBars,"IsoNum","C/E","Sigma",ebDict,data=df_iso, hue='Evaluation',
+	   markeredgecolor='k',ls='',elinewidth=1.5,capsize=8,zorder=0)
 
 	g.set_xlabels('Isotope').set_titles("{col_name}")
 	plt.legend(bbox_to_anchor=(1.1, 0.90), loc=2, borderaxespad=0., title="Evaluation")
