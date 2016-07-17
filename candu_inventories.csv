@@ -104,3 +104,45 @@ Pickering-A 19558C,eu155,ENDF VII.1 + mod-Mughabghab,4.001E+09,Bq / kgU
 Pickering-A 19558C,np237,ENDF VII.1 + mod-Mughabghab,9.623E+05,Bq / kgU
 Pickering-A 19558C,am241,ENDF VII.1 + mod-Mughabghab,1.941E+10,Bq / kgU
 Pickering-A 19558C,cm244,ENDF VII.1 + mod-Mughabghab,8.295E+08,Bq / kgU
+Pickering-A 19558C,u235,JEFF-3.2,1.670E-03,at % / element
+Pickering-A 19558C,u236,JEFF-3.2,8.378E-04,at % / element
+Pickering-A 19558C,u238,JEFF-3.2,9.975E-01,at % / element
+Pickering-A 19558C,pu238,JEFF-3.2,1.499E-03,at % / element
+Pickering-A 19558C,pu239,JEFF-3.2,6.453E-01,at % / element
+Pickering-A 19558C,pu240,JEFF-3.2,2.970E-01,at % / element
+Pickering-A 19558C,pu241,JEFF-3.2,3.251E-02,at % / element
+Pickering-A 19558C,pu242,JEFF-3.2,2.366E-02,at % / element
+Pickering-A 19558C,h3,JEFF-3.2,2.210E+09,Bq / kgU
+Pickering-A 19558C,sr90,JEFF-3.2,5.010E+11,Bq / kgU
+Pickering-A 19558C,tc99,JEFF-3.2,1.534E+08,Bq / kgU
+Pickering-A 19558C,ru106,JEFF-3.2,2.833E+08,Bq / kgU
+Pickering-A 19558C,sb125,JEFF-3.2,2.699E+09,Bq / kgU
+Pickering-A 19558C,i129,JEFF-3.2,3.010E+05,Bq / kgU
+Pickering-A 19558C,cs134,JEFF-3.2,3.974E+09,Bq / kgU
+Pickering-A 19558C,cs137,JEFF-3.2,7.821E+11,Bq / kgU
+Pickering-A 19558C,eu154,JEFF-3.2,1.028E+10,Bq / kgU
+Pickering-A 19558C,eu155,JEFF-3.2,3.925E+09,Bq / kgU
+Pickering-A 19558C,np237,JEFF-3.2,9.623E+05,Bq / kgU
+Pickering-A 19558C,am241,JEFF-3.2,1.941E+10,Bq / kgU
+Pickering-A 19558C,cm244,JEFF-3.2,8.295E+08,Bq / kgU
+Pickering-A 19558C,u235,JEFF-3.2 + mod-Mughabghab,1.670E-03,at % / element
+Pickering-A 19558C,u236,JEFF-3.2 + mod-Mughabghab,8.378E-04,at % / element
+Pickering-A 19558C,u238,JEFF-3.2 + mod-Mughabghab,9.975E-01,at % / element
+Pickering-A 19558C,pu238,JEFF-3.2 + mod-Mughabghab,1.499E-03,at % / element
+Pickering-A 19558C,pu239,JEFF-3.2 + mod-Mughabghab,6.453E-01,at % / element
+Pickering-A 19558C,pu240,JEFF-3.2 + mod-Mughabghab,2.970E-01,at % / element
+Pickering-A 19558C,pu241,JEFF-3.2 + mod-Mughabghab,3.251E-02,at % / element
+Pickering-A 19558C,pu242,JEFF-3.2 + mod-Mughabghab,2.366E-02,at % / element
+Pickering-A 19558C,h3,JEFF-3.2 + mod-Mughabghab,2.210E+09,Bq / kgU
+Pickering-A 19558C,sr90,JEFF-3.2 + mod-Mughabghab,5.010E+11,Bq / kgU
+Pickering-A 19558C,tc99,JEFF-3.2 + mod-Mughabghab,1.534E+08,Bq / kgU
+Pickering-A 19558C,ru106,JEFF-3.2 + mod-Mughabghab,2.833E+08,Bq / kgU
+Pickering-A 19558C,sb125,JEFF-3.2 + mod-Mughabghab,2.699E+09,Bq / kgU
+Pickering-A 19558C,i129,JEFF-3.2 + mod-Mughabghab,3.010E+05,Bq / kgU
+Pickering-A 19558C,cs134,JEFF-3.2 + mod-Mughabghab,3.974E+09,Bq / kgU
+Pickering-A 19558C,cs137,JEFF-3.2 + mod-Mughabghab,7.821E+11,Bq / kgU
+Pickering-A 19558C,eu154,JEFF-3.2 + mod-Mughabghab,9.595E+09,Bq / kgU
+Pickering-A 19558C,eu155,JEFF-3.2 + mod-Mughabghab,4.002E+09,Bq / kgU
+Pickering-A 19558C,np237,JEFF-3.2 + mod-Mughabghab,9.623E+05,Bq / kgU
+Pickering-A 19558C,am241,JEFF-3.2 + mod-Mughabghab,1.941E+10,Bq / kgU
+Pickering-A 19558C,cm244,JEFF-3.2 + mod-Mughabghab,8.295E+08,Bq / kgU
